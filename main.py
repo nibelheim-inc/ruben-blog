@@ -78,7 +78,7 @@ class BlogPost(db.Model):
 class Comment(db.Model):
     __tablename__ = "comments"
     id = db.Column(db.Integer, primary_key=True)
-    text = db.Column(db.Text(1000), nullable=False)
+    text = db.Column(db.Text, nullable=False)
 
     # Child Relationship with User
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
